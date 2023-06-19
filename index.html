@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Online Resume</title>
+		<link rel="stylesheet" href="AdminLTE-3.2.0/plugins/icheck-bootstrap/icheck-bootstrap.min.css" />
+		<link
+			rel="stylesheet"
+			href="AdminLTE-3.2.0/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css" />
+		<link rel="stylesheet" href="AdminLTE-3.2.0/plugins/fontawesome-free/css/all.min.css" />
+		<link rel="stylesheet" href="AdminLTE-3.2.0/dist/css/adminlte.min.css" />
+		<link rel="stylesheet" href="portfolio.css" />
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+		<link rel="manifest" href="favicon/site.webmanifest" />
+	</head>
+	<body class="dark-mode layout-fixed layout-navbar-fixed layout-top-nav sidebar-collapse sidebar-closed">
+		<header class="wrapper">
+			<nav class="main-header navbar navbar-expand-md navbar-dark bg-navy">
+				<button
+					class="navbar-toggler order-1"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarCollapse"
+					aria-controls="navbarCollapse"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse order-3" id="navbarCollapse">
+					<ul class="navbar-nav col-md-12">
+						<li class="nav-item">
+							<a href="#home" onclick="scrollToSection('#home')" class="nav-link header-text">Home</a>
+						</li>
+						<li class="nav-item">
+							<a href="#personal-info" onclick="scrollToSection('#personal-info')" class="nav-link header-text">
+								Personal Info
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="#experience" onclick="scrollToSection('#experience')" class="nav-link header-text">
+								Experience
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="#education" onclick="scrollToSection('#education')" class="nav-link header-text"> Education </a>
+						</li>
+						<li class="nav-item">
+							<a href="#skills" onclick="scrollToSection('#skills')" class="nav-link header-text"> Skills </a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<main class="wrapper">
+			<div class="content-wrapper">
+				<div id="home" class="parallax" style="background-image: url(home.jpg)">
+					<div class="parallax-content">
+						<section class="content">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="box">
+										<div class="glass">
+											<h1 class="text-md font-size-custom custom-text-color">
+												Welcome, <b>I'm Mar Angelo Urriquia.</b><br /><br />
+												I'm an aspiring developer that is knowledgeable in different programming languages and this site
+												serves as my online resume. Start scrolling to learn more about me.
+											</h1>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+
+				<div id="personal-info" class="parallax" style="background-image: url(Personal-Information.png)">
+					<div class="parallax-content">
+						<dialog class="dialog" id="add-info" data-modal>
+							<div class="modal-dialog modal-lg">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h1 class="modal-title text-white">Additional Information</h1>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close" data-close-modal1>
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<div class="row">
+											<div class="col-7">
+												<ul class="ml-4 mb-0 fa-ul text-muted">
+													<li class="">
+														<span class="fa-li">
+															<i class="fas fa-lg fa-calendar-alt"></i>
+														</span>
+														Age: <span id="result"></span>
+													</li>
+													<li class="">
+														<span class="fa-li">
+															<i class="fas fa-lg fa-flag"></i>
+														</span>
+														Nationality: Philippines
+													</li>
+													<li class="">
+														<span class="fa-li">
+															<i class="fas fa-lg fa-male"></i>
+														</span>
+														Gender: Male
+													</li>
+													<li class="">
+														<span class="fa-li">
+															<i class="fas fa-lg fa-user"></i>
+														</span>
+														Civil Status: Single
+													</li>
+													<li class="">
+														<span class="fa-li">
+															<i class="fas fa-lg fa-tint"></i>
+														</span>
+														Blood Type: A
+													</li>
+												</ul>
+											</div>
+											<div class="col-5 text-center">
+												<img src="personal-info-modal.jpg" alt="user-avatar" class="img-fluid" />
+											</div>
+										</div>
+									</div>
+									<div class="modal-footer justify-content-center">
+										<button
+											type="button"
+											class="btn btn-default text-center"
+											data-dismiss="modal"
+											aria-label="Close"
+											data-close-modal2>
+											Close
+										</button>
+									</div>
+								</div>
+							</div>
+						</dialog>
+
+						<section class="content">
+							<div class="row">
+								<div class="offset-md-2 col-md-8 d-flex align-items-stretch flex-column">
+									<div class="card d-flex transparent">
+										<div class="card-header text-muted border-bottom-0">
+											<i class="fas fa-address-card"></i> Personal Information
+										</div>
+										<div class="card-body pt-0">
+											<div class="row">
+												<div class="col-7">
+													<h2 class="lead text-muted">
+														<b>Mar Angelo Urriquia</b>
+													</h2>
+													<p class="text-muted text-md">
+														<b>About: </b>
+														Web Designer
+													</p>
+													<ul class="ml-4 mb-0 fa-ul text-muted">
+														<li class="">
+															<span class="fa-li">
+																<i class="fas fa-lg fa-building"></i>
+															</span>
+															Address: 1926 National Highway, Dita, City of Santa Rosa, Laguna
+														</li>
+														<li class="">
+															<span class="fa-li">
+																<i class="fas fa-lg fa-phone"></i>
+															</span>
+															Phone #: +63 - 939 925 8371
+														</li>
+														<li class="">
+															<span class="fa-li">
+																<i class="fas fa-lg fa-envelope"></i>
+															</span>
+															Email Address:
+															<p class="email-indicator email-tooltip" data-email="gelourriquia@gmail.com">
+																gelourriquia@gmail.com
+															</p>
+														</li>
+													</ul>
+												</div>
+												<div class="col-5 text-center">
+													<img src="personal-info.jpg" alt="user-avatar" class="img-fluid" />
+												</div>
+											</div>
+										</div>
+										<div class="card-footer">
+											<div class="text-right">
+												<button
+													type="button"
+													class="btn btn-sm btn-primary"
+													data-toggle="modal"
+													data-target="#add-info"
+													onclick="subtract()"
+													data-open-modal>
+													<i class="fas fa-user"></i> View Additional Info
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+
+				<div id="experience" class="parallax" style="background-image: url(Experience.png)">
+					<div class="parallax-content">
+						<section class="content">
+							<div class="row">
+								<div class="offset-md-2 col-md-8 d-flex align-items-stretch flex-column">
+									<div class="card transparent">
+										<div class="card-header">
+											<h3 class="card-title text-muted">
+												<i class="fas fa-briefcase text-white"></i>
+												Experience
+											</h3>
+										</div>
+										<div class="card-body text-muted">
+											<dl>
+												<dt><b>Programmer Intern</b> (February 2023 – May 2023)</dt>
+												<dd>
+													City Information Technology Office, J. P Rizal, City Government Center, City of Santa Rosa,
+													Laguna <br />
+													<span class="indent-head"><b>Responsibilities:</b></span>
+													<br />
+													<span class="indent-content">
+														1. Developed a web application for managing daily tasks/requests. </span
+													><br />
+													<span class="indent-content">
+														2. Assisted in generating document for reports, and requests.
+													</span>
+												</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+
+				<div id="education" class="parallax" style="background-image: url(Education.png)">
+					<div class="parallax-content">
+						<section class="content">
+							<div class="row">
+								<div class="offset-md-2 col-md-8 d-flex align-items-stretch flex-column">
+									<div class="card transparent text-muted">
+										<div class="card-header">
+											<h3 class="card-title">
+												<i class="fas fa-graduation-cap educ-fill"></i>
+												Education
+											</h3>
+										</div>
+										<div class="card-body">
+											<dl class="row">
+												<dt class="col-sm-4">
+													BS in Information Technology
+													<small>(November 2018 – Expected graduation date August 2023) <br /></small>
+												</dt>
+												<dd class="col-sm-8">STI College Santa Rosa</dd>
+												<dt class="col-sm-4">
+													BS in Marine Transportation <br /><small>(June 2012 – May 2015)</small>
+												</dt>
+												<dd class="col-sm-8">Mapua Malayan Colleges Laguna (formerly Malayan Colleges Laguna)</dd>
+												<dt class="col-sm-4">Secondary Education <br /><small>(June 2008 – March 2012)</small></dt>
+												<dd class="col-sm-8">Emmanuel Christian School</dd>
+												<dt class="col-sm-4">Primary Education <br /><small>(June 2006 – March 2008)</small></dt>
+												<dd class="col-sm-8">Saint Matthew Montessori and Science High School</dd>
+												<dt class="col-sm-4">Primary Education <br /><small>(June 2002 – March 2006 )</small></dt>
+												<dd class="col-sm-8">Collegio de Santo Niño</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+
+				<div id="skills" class="parallax" style="background-image: url(Skills.png)">
+					<div class="parallax-content">
+						<section class="content">
+							<div class="row">
+								<div class="offset-md-2 col-md-8 d-flex align-items-stretch flex-column">
+									<div class="card transparent text-muted">
+										<div class="card-header">
+											<h3 class="card-title">
+												<i class="fas fa-brain red-fill"></i>
+												Skills
+											</h3>
+										</div>
+										<div class="card-body">
+											<dl class="row">
+												<dt class="col-sm-4">
+													<i class="fas fa-laptop-code hardskill-fill"></i>
+													Hard Skills
+												</dt>
+												<dd class="col-sm-8">- PHP</dd>
+												<dd class="offset-sm-4 col-sm-8">- SQL</dd>
+												<dd class="offset-sm-4 col-sm-8">- Web Development</dd>
+												<dd class="offset-sm-4 col-sm-8">- Python</dd>
+												<dd class="offset-sm-4 col-sm-8">- C#</dd>
+												<dd class="offset-sm-4 col-sm-8">- Java</dd>
+												<dd class="offset-sm-4 col-sm-8">- Front-End and Back-EndDevelopment</dd>
+											</dl>
+											<dl class="row">
+												<dt class="col-sm-4">
+													<i class="fas fa-comments text-white"></i>
+													Soft Skills
+												</dt>
+												<dd class="col-sm-8">- Critical Thinking</dd>
+												<dd class="offset-sm-4 col-sm-8">- Active Listening</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="AdminLTE-3.2.0/plugins/jquery/jquery.min.js"></script>
+		<script src="AdminLTE-3.2.0/plugins/jquery-ui/jquery-ui.min.js"></script>
+		<script src="AdminLTE-3.2.0/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="AdminLTE-3.2.0/plugins/jquery-knob/jquery.knob.min.js"></script>
+		<script src="AdminLTE-3.2.0/dist/js/adminlte.min.js"></script>
+		<script src="portfolio.js"></script>
+	</body>
+</html>
