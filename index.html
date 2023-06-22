@@ -19,7 +19,7 @@
 	</head>
 	<body class="dark-mode layout-fixed layout-navbar-fixed layout-top-nav sidebar-collapse sidebar-closed">
 		<header class="wrapper">
-			<nav class="main-header navbar navbar-expand-md navbar-dark bg-navy">
+			<nav class="main-header navbar navbar-expand-md navbar-dark nav-custom-color-dark">
 				<button
 					class="navbar-toggler order-1"
 					type="button"
@@ -33,23 +33,47 @@
 				<div class="collapse navbar-collapse order-3" id="navbarCollapse">
 					<ul class="navbar-nav col-md-12">
 						<li class="nav-item">
-							<a href="#home" onclick="scrollToSection('#home')" class="nav-link header-text">Home</a>
+							<a href="#home" onclick="scrollToSection('#home')" class="nav-link header-text navtxt-custom-color-dark"
+								>Home</a
+							>
 						</li>
 						<li class="nav-item">
-							<a href="#personal-info" onclick="scrollToSection('#personal-info')" class="nav-link header-text">
+							<a
+								href="#personal-info"
+								onclick="scrollToSection('#personal-info')"
+								class="nav-link header-text navtxt-custom-color-dark">
 								Personal Info
 							</a>
 						</li>
 						<li class="nav-item">
-							<a href="#experience" onclick="scrollToSection('#experience')" class="nav-link header-text">
+							<a
+								href="#experience"
+								onclick="scrollToSection('#experience')"
+								class="nav-link header-text navtxt-custom-color-dark">
 								Experience
 							</a>
 						</li>
 						<li class="nav-item">
-							<a href="#education" onclick="scrollToSection('#education')" class="nav-link header-text"> Education </a>
+							<a
+								href="#education"
+								onclick="scrollToSection('#education')"
+								class="nav-link header-text navtxt-custom-color-dark">
+								Education
+							</a>
 						</li>
 						<li class="nav-item">
-							<a href="#skills" onclick="scrollToSection('#skills')" class="nav-link header-text"> Skills </a>
+							<a
+								href="#skills"
+								onclick="scrollToSection('#skills')"
+								class="nav-link header-text navtxt-custom-color-dark">
+								Skills
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link toggle-btn navtxt-custom-color-dark" onclick="toggleLightMode()">
+								<i class="fas fa-toggle-off" id="toggleBtn"></i>
+								Toggle Light Mode
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -57,14 +81,14 @@
 		</header>
 		<main class="wrapper">
 			<div class="content-wrapper">
-				<div id="home" class="parallax" style="background-image: url(Home.png)">
+				<div id="home" class="parallax">
 					<div class="parallax-content">
 						<section class="content">
 							<div class="row">
 								<div class="col-md-12">
 									<div class="box">
-										<div class="glass">
-											<h1 class="text-sd font-size-custom custom-text-color">
+										<div class="glass-dark">
+											<h1 class="text-md larger-txt-dark">
 												Welcome, <b>I'm Mar Angelo Urriquia.</b><br /><br />
 												I'm an aspiring developer that is knowledgeable in different programming languages and this site
 												serves as my online resume. Start scrolling to learn more about me.
@@ -77,13 +101,13 @@
 					</div>
 				</div>
 
-				<div id="personal-info" class="parallax" style="background-image: url(Personal-Information.png)">
+				<div id="personal-info" class="parallax">
 					<div class="parallax-content">
-						<dialog class="dialog" id="add-info" data-modal>
+						<dialog class="dialog-dark" id="add-info" data-modal>
 							<div class="modal-dialog modal-lg">
 								<div class="modal-content">
 									<div class="modal-header">
-										<h1 class="modal-title text-white">Additional Information</h1>
+										<h1 class="modal-title modal-text-color-dark">Additional Information</h1>
 										<button type="button" class="close" data-dismiss="modal" aria-label="Close" data-close-modal1>
 											<span aria-hidden="true">&times;</span>
 										</button>
@@ -91,7 +115,7 @@
 									<div class="modal-body">
 										<div class="row">
 											<div class="col-7">
-												<ul class="ml-4 mb-0 fa-ul text-muted">
+												<ul class="ml-4 mb-0 fa-ul modal-text-color-dark">
 													<li class="mb-2">
 														<span class="fa-li">
 															<i class="fas fa-lg fa-calendar-alt"></i>
@@ -132,7 +156,7 @@
 									<div class="modal-footer justify-content-center">
 										<button
 											type="button"
-											class="btn btn-default text-center"
+											class="btn modal-button-color-dark text-center"
 											data-dismiss="modal"
 											aria-label="Close"
 											data-close-modal2>
@@ -146,17 +170,17 @@
 						<section class="content">
 							<div class="row">
 								<div class="offset-md-2 col-md-8 d-flex align-items-stretch flex-column">
-									<div class="card d-flex transparent">
-										<div class="card-header text-muted border-bottom-0">
-											<i class="fas fa-address-card"></i> Personal Information
+									<div class="card d-flex transparent-dark">
+										<div class="card-header border-bottom-0 custom-text-color-dark">
+											<i class="fas fa-address-card info-fill"></i> Personal Information
 										</div>
 										<div class="card-body pt-0">
 											<div class="row">
 												<div class="col-7">
-													<h2 class="lead text-muted mb-3">
+													<h2 class="lead mb-3 custom-text-color-dark">
 														<b>Mar Angelo Urriquia</b>
 													</h2>
-													<ul class="ml-4 mb-0 fa-ul text-muted">
+													<ul class="ml-4 mb-0 fa-ul custom-text-color-dark">
 														<li class="mb-2">
 															<span class="fa-li">
 																<i class="fas fa-lg fa-building"></i>
@@ -189,7 +213,7 @@
 											<div class="text-right">
 												<button
 													type="button"
-													class="btn btn-sm btn-primary"
+													class="btn btn-sm modal-button-color-dark"
 													data-toggle="modal"
 													data-target="#add-info"
 													onclick="subtract()"
@@ -205,19 +229,19 @@
 					</div>
 				</div>
 
-				<div id="experience" class="parallax" style="background-image: url(Experience.png)">
+				<div id="experience" class="parallax">
 					<div class="parallax-content">
 						<section class="content">
 							<div class="row">
 								<div class="offset-md-2 col-md-8 d-flex align-items-stretch flex-column">
-									<div class="card transparent">
+									<div class="card transparent-dark">
 										<div class="card-header">
-											<h3 class="card-title text-muted">
-												<i class="fas fa-briefcase text-white"></i>
+											<h3 class="card-title custom-text-color-dark">
+												<i class="fas fa-briefcase exp-fill-dark"></i>
 												Experience
 											</h3>
 										</div>
-										<div class="card-body text-muted">
+										<div class="card-body custom-text-color-dark">
 											<dl>
 												<dt><b>Programmer Intern</b> (February 2023 – May 2023)</dt>
 												<dd>
@@ -241,19 +265,19 @@
 					</div>
 				</div>
 
-				<div id="education" class="parallax" style="background-image: url(Education.png)">
+				<div id="education" class="parallax">
 					<div class="parallax-content">
 						<section class="content">
 							<div class="row">
 								<div class="offset-md-2 col-md-8 d-flex align-items-stretch flex-column">
-									<div class="card transparent text-muted">
+									<div class="card transparent-dark">
 										<div class="card-header">
-											<h3 class="card-title">
+											<h3 class="card-title custom-text-color-dark">
 												<i class="fas fa-graduation-cap educ-fill"></i>
 												Education
 											</h3>
 										</div>
-										<div class="card-body">
+										<div class="card-body custom-text-color-dark">
 											<dl class="row">
 												<dt class="col-sm-4">
 													BS in Information Technology
@@ -279,19 +303,19 @@
 					</div>
 				</div>
 
-				<div id="skills" class="parallax" style="background-image: url(Skills.png)">
+				<div id="skills" class="parallax">
 					<div class="parallax-content">
 						<section class="content">
 							<div class="row">
 								<div class="offset-md-2 col-md-8 d-flex align-items-stretch flex-column">
-									<div class="card transparent text-muted">
+									<div class="card transparent-dark">
 										<div class="card-header">
-											<h3 class="card-title">
-												<i class="fas fa-brain red-fill"></i>
+											<h3 class="card-title custom-text-color-dark">
+												<i class="fas fa-brain skill-fill"></i>
 												Skills
 											</h3>
 										</div>
-										<div class="card-body">
+										<div class="card-body custom-text-color-dark">
 											<dl class="row">
 												<dt class="col-sm-4">
 													<i class="fas fa-laptop-code hardskill-fill"></i>
@@ -307,7 +331,7 @@
 											</dl>
 											<dl class="row">
 												<dt class="col-sm-4">
-													<i class="fas fa-comments text-white"></i>
+													<i class="fas fa-comments softskill-fill-dark"></i>
 													Soft Skills
 												</dt>
 												<dd class="col-sm-8">- Critical Thinking</dd>
